@@ -1,8 +1,8 @@
 # Problem Set 3: Git & Python Fundamentals
 
 ## Student Information
-Name: YOUR_NAME_HERE
-Date: DATE_HERE
+Name: Valerio Fares
+Date: 26.09.2025
 
 ## Assignment Overview
 This assignment covers Git version control basics and Python fundamentals including variables, control flow, functions, and file I/O.
