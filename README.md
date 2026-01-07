@@ -5,29 +5,32 @@ Which classification model performs best for predicting startup success (acquire
 Logistic Regression, KNN, Naive Bayes, SVM, Random Forest, or XGBoost?
 
 ## Setup
-# Create environment
+### Create environment
 conda env create -f environment.yml
+
 conda activate project-vc
 
-# Usage
+### Usage
 python main.py
 
-# Expected output: Accuracy comparison between models with and without PCA, detailed classification report for each model and winner.
-
-## Usage
-python main.py
+Expected output: Accuracy comparison between models with and without PCA, detailed classification report for each model and winner.
 
 ## Project Structure
+
+```text
 project/
-├── main.py              # Main entry point
-├── src/                 # Source code
-│   ├── data_loader.py   # Data loading/preprocessing
-│   ├── models.py        # Model training
-│   └── evaluation.py    # Evaluation metrics
-├── data/raw/            # Crunchbase dataset
-├── report/figures/      # Generated plots
-├── notebooks/           # Exploratory notebooks
-└── environment.yml      # Dependencies
+├── main.py               # Main entry point
+├── src/                  # Source code
+│   ├── data_loader.py    # Data loading and preprocessing
+│   ├── models.py         # Model definition and training
+│   └── evaluation.py     # Evaluation metrics and analysis
+├── data/
+│   └── raw/              # Raw Crunchbase dataset
+├── report/
+│   └── figures/          # Generated plots and visualizations
+├── notebooks/            # Exploratory and experimental notebooks
+└── environment.yml       # Project dependencies
+```
 
 ## Results
 ### Models Without PCA
