@@ -1,41 +1,53 @@
-# Problem Set 3: Git & Python Fundamentals
+# Startup Success Prediction: Model Comparison
 
-## Student Information
-Name: Valerio Fares
-Date: 26.09.2025
+## Research Question
+Which classification model performs best for predicting startup success (acquired/IPO vs closed/operating):
+Logistic Regression, KNN, Naive Bayes, SVM, Random Forest, or XGBoost?
 
-## Assignment Overview
-This assignment covers Git version control basics and Python fundamentals including variables, control flow, functions, and file I/O.
+## Setup
+# Create environment
+conda env create -f environment.yml
+conda activate project-vc
 
-## Files in This Repository
-- `problem2.py` - Temperature converter
-- `problem3.py` - Number analysis program
-- `problem4.py` - File word counter
-- `bonus_password_generator.py` - (Optional) Password generator
-- `git_log.txt` - Your Git history for Problem 1
-- `sample.txt` - Created by problem4.py
+# Usage
+python main.py
 
-## How to Complete This Assignment
+# Expected output: Accuracy comparison between models with and without PCA, detailed classification report for each model and winner.
 
-1. Clone this repository
-2. Complete each problem in its respective file
-3. Test your solutions
-4. Commit your changes regularly
-5. Push your final submission
+## Usage
+python main.py
 
-## Testing Your Code
-```bash
-python problem2.py
-python problem3.py
-python problem4.py
-python bonus_password_generator.py  # if completed
-```
+## Project Structure
+project/
+├── main.py              # Main entry point
+├── src/                 # Source code
+│   ├── data_loader.py   # Data loading/preprocessing
+│   ├── models.py        # Model training
+│   └── evaluation.py    # Evaluation metrics
+├── data/raw/            # Crunchbase dataset
+├── report/figures/      # Generated plots
+├── notebooks/           # Exploratory notebooks
+└── environment.yml      # Dependencies
 
-## Submission Checklist
-- [ ] Problem 1: Git workflow completed with at least 4 commits
-- [ ] Problem 2: Temperature converter works correctly
-- [ ] Problem 3: Number analysis handles all requirements
-- [ ] Problem 4: File word counter produces correct output
-- [ ] (Optional) Bonus password generator completed
-- [ ] All code is properly commented
-- [ ] Repository pushed to GitHub
+## Results
+### Models Without PCA
+- Random Forest: 0.879 accuracy
+- XGBoost: 0.876 accuracy
+- KNN: 0.863 accuracy
+- Logistic Regression: 0.720 accuracy
+- SVM: 0.711 accuracy
+- Naive Bayes: 0.443 accuracy
+
+### Models With PCA (65 components)
+- Random Forest: 0.874 accuracy
+- XGBoost: 0.869 accuracy
+- KNN: 0.864 accuracy
+- Naive Bayes: 0.797 accuracy
+- Logistic Regression: 0.686 accuracy
+- SVM: 0.682 accuracy
+
+- **Winner**: Random Forest (0.879 accuracy)
+
+## Requirements
+- Python 3.11
+- pandas, numpy, scikit-learn, matplotlib, seaborn, xgboost
